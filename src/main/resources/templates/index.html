@@ -1,8 +1,26 @@
-<div th:fragment="content">
-    <h1>Welcome to the Grocery Store</h1>
-    <p>Please select your role</p>
-    <form action="/roleSelection" method="post">
-        <button type="submit" name="role" value="customer">Customer</button>
-        <button type="submit" name="role" value="manager">Manager</button>
-    </form>
-</div>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script src="http://localhost:35729/livereload.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar Fragment -->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+        <!-- Main Content (specific to each page) -->
+        <div class="content">
+            <div th:replace="~{${content} :: content}"></div>
+        </div>
+
+        <!-- Footer Fragment -->
+        <footer th:replace="~{fragments/footer :: footer}"></footer>
+    </div>
+</body>
+
+</html>

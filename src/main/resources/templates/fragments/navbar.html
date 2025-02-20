@@ -1,36 +1,39 @@
 <div th:fragment="navbar">
-    <nav>
-        <ul>
-            <!-- Manager-specific links -->
-            <li th:if="${role == 'manager'}">
-                <a th:href="@{/manager/home}">Home</a>
-            </li>
-            <li th:if="${role == 'manager'}">
-                <a th:href="@{/manager/add-product}">Add Product</a>
-            </li>
-            <li th:if="${role == 'manager'}">
-                <a th:href="@{/manager/products}">View Products</a>
-            </li>
-            <li th:if="${role == 'manager'}">
-                <a th:href="@{/manager/inventory-files}">Save/Load Inventory</a>
-            </li>
+    <header>
+        <h1 class="logo">Grocery Store</h1>
+        <nav>
+            <ul class="nav-links">
+                <!-- Manager-specific links -->
+                <li th:if="${role == 'manager'}">
+                    <a th:href="@{/manager/home}">Home</a>
+                </li>
+                <li th:if="${role == 'manager'}">
+                    <a th:href="@{/manager/add-product}">Add Product</a>
+                </li>
+                <li th:if="${role == 'manager'}">
+                    <a th:href="@{/manager/products}">View Products</a>
+                </li>
+                <li th:if="${role == 'manager'}">
+                    <a th:href="@{/manager/inventory-files}">Save/Load Inventory</a>
+                </li>
 
-            <!-- Customer-specific links -->
-            <li th:if="${role == 'customer'}">
-                <a th:href="@{/customer/home}">Home</a>
-            </li>
-            <li th:if="${role == 'customer'}">
-                <a th:href="@{/customer/products}">View Products</a>
-            </li>
-            <li th:if="${role == 'customer'}">
-                <a th:href="@{/customer/cart}">View Cart</a>
-            </li>
-            <li th:if="${role == 'customer'}">
-                <a th:href="@{/customer/checkout}">Checkout</a>
-            </li>
+                <!-- Customer-specific links -->
+                <li th:if="${role == 'customer'}">
+                    <a th:href="@{/customer/home}">Home</a>
+                </li>
+                <li th:if="${role == 'customer'}">
+                    <a th:href="@{/customer/products}">View Products</a>
+                </li>
+                <li th:if="${role == 'customer'}">
+                    <a th:href="@{/customer/cart}">View Cart</a>
+                </li>
+                <li th:if="${role == 'customer'}">
+                    <a th:href="@{/customer/checkout}">Checkout</a>
+                </li>
 
-            <!-- Common links -->
-            <li><a th:href="@{/}">Logout</a></li>
-        </ul>
-    </nav>
+                <!-- Common links -->
+                <li><a th:href="@{/}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
 </div>

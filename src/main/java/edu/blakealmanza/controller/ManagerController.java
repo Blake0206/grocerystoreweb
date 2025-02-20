@@ -13,20 +13,20 @@ public class ManagerController {
     public String showAllProducts(Model model) {
         model.addAttribute("role", "manager");
         model.addAttribute("content", "manager/products");
-        return "layout";
+        return "index";
     }
 
     @GetMapping("/add-product")
     public String addProduct(Model model) {
         model.addAttribute("role", "manager");
         model.addAttribute("content", "manager/add-product");
-        return "layout";
+        return "index";
     }
 
     @GetMapping("/inventory-files")
     public String showFiles(Model model) {
         model.addAttribute("role", "manager");
         model.addAttribute("content", "manager/inventory-files");
-        return "layout";
+        return "index";
     }
 }

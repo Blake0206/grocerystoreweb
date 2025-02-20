@@ -6,6 +6,38 @@ body {
     margin: 0;
 }
 
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #7ab6f2;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links li a:hover {
+    color: #c254e1;
+}
+
 /* Wrapper that covers the entire viewport */
 .wrapper {
     display: flex;
@@ -16,10 +48,22 @@ body {
 /* Content area that grows to push footer down */
 .content {
     flex: 1;
+    padding-top: 100px;
 }
 
 h1 {
   color: #333;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form button {
+  margin: 10px;
 }
 
 button {
@@ -30,28 +74,15 @@ button {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 button:hover {
   background-color: #218838;
 }
 
-nav {
-  margin-bottom: 20px;
-  text-align: center;
-  background-color: #7ab6f2;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
+button:active {
+  background-color: #114c1f;
 }
 
 footer {
