@@ -19,6 +19,6 @@ public class RoleController {
         } else if ("manager".equals(role)) {
             return "redirect:/manager/home";
         }
-        return "index"; // default to index page if no role selected
+        return "welcome"; // default to welcome page if no role selected
     }
 }

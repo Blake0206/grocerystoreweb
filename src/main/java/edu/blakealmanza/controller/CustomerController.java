@@ -13,14 +13,14 @@ public class CustomerController {
     public String products(Model model) {
         model.addAttribute("role", "customer");
         model.addAttribute("content", "customer/products");
-        return "layout";
+        return "index";
     }
 
     @GetMapping("/cart")
     public String cart(Model model) {
         model.addAttribute("role", "customer");
         model.addAttribute("content", "customer/cart");
-        return "layout";
+        return "index";
     }
 
     @GetMapping("/checkout")
@@ -28,7 +28,7 @@ public class CustomerController {
         model.addAttribute("role", "customer");
         model.addAttribute("content", "customer/checkout");
 
-        return "layout";
+        return "index";
     }
 
 }
