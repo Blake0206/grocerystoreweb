@@ -9,14 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/manager")
 public class ManagerController {
 
-    @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("name", "Blake");
-        return "index";
-    }
-
     @GetMapping("/products")
     public String showAllProducts(Model model) {
-        return "manager/products";
+        model.addAttribute("role", "manager");
+        model.addAttribute("content", "manager/products");
+        return "layout";
+    }
+
+    @GetMapping("/add-product")
+    public String addProduct(Model model) {
+        model.addAttribute("role", "manager");
+        model.addAttribute("content", "manager/add-product");
+        return "layout";
+    }
+
+    @GetMapping("/inventory-files")
+    public String showFiles(Model model) {
+        model.addAttribute("role", "manager");
+        model.addAttribute("content", "manager/inventory-files");
+        return "layout";
     }
 }

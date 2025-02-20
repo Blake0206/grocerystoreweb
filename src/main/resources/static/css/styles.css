@@ -1,7 +1,21 @@
+html,
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+}
+
+/* Wrapper that covers the entire viewport */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content area that grows to push footer down */
+.content {
+    flex: 1;
 }
 
 h1 {
@@ -20,4 +34,30 @@ button {
 
 button:hover {
   background-color: #218838;
+}
+
+nav {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #7ab6f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #7ab6f2;
+  padding: 10px;
+  margin-top: auto;
 }
