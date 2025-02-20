@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  <h1>Hello, <span th:text="${name}">User</span>!</h1>
+  <button class="Customer"><a href="/customer/home">Customer</a></button>
+  <button class="Manager"><a th:href="@{/manager/products}">Manager</a></button>
 </body>
 
 </html>

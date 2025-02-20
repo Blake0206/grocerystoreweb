@@ -6,9 +6,12 @@ async function fetchProducts() {
 		const list = document.getElementById('product-list');
 		list.innerHTML = '';
 
-		products.forEach((productWithQuantity) => {
+		products.forEach((product) => {
 			const item = document.createElement('li');
-			item.textContent = `${productWithQuantity.product.name} - ${productWithQuantity.product.description} - ${productWithQuantity.product.dateOfManufacture} - $${productWithQuantity.product.price} - ${productWithQuantity.quantity}`;
+			let propsText = Object.keys(product)
+				.map((key) => `${key}: ${product[key]}`)
+				.join(' - ');
+			item.textContent = propsText;
 			list.appendChild(item);
 		});
 	} catch (error) {
