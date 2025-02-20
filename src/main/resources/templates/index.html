@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="http://localhost:35729/livereload.js"></script>
-  <title>Welcome Page</title>
-</head>
-
-<body>
-  <button class="Customer"><a th:href="@{/customer/home}">Customer</a></button>
-  <button class="Manager"><a th:href="@{/manager/products}">Manager</a></button>
-</body>
-
-</html>
+<div th:fragment="content">
+    <h1>Welcome to the Grocery Store</h1>
+    <p>Please select your role</p>
+    <form action="/roleSelection" method="post">
+        <button type="submit" name="role" value="customer">Customer</button>
+        <button type="submit" name="role" value="manager">Manager</button>
+    </form>
+</div>
