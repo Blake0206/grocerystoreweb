@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Grocery Store</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <!-- <link rel="stylesheet" th:href="@{/css/styles.css}"> -->
+    <link rel="stylesheet" th:href="@{/css/main.css}">
     <script src="http://localhost:35729/livereload.js"></script>
 </head>
 
-<body>
-    <div class="wrapper">
+<body class="font-sans text-center h-full m-0">
+    <div class="flex flex-col min-h-screen">
         <!-- Navbar Fragment -->
         <div th:replace="~{fragments/navbar :: navbar}"></div>
 
         <!-- Main Content (specific to each page) -->
-        <div class="content">
+        <div class="flex-1 pt-24">
             <div th:replace="~{${content} :: content}"></div>
         </div>
 
         <!-- Footer Fragment -->
-        <footer th:replace="~{fragments/footer :: footer}"></footer>
+        <div th:replace="~{fragments/footer :: footer}"></div>
     </div>
 </body>
 
