@@ -1,8 +1,8 @@
 <div th:fragment="content">
     <h1>Welcome to the Grocery Store</h1>
     <p>Please select your role</p>
-    <form action="/roleSelection" method="post">
-        <button type="submit" name="role" value="customer">Customer</button>
-        <button type="submit" name="role" value="manager">Manager</button>
+    <form action="/roleSelection" method="post" class="flex items-center justify-center">
+        <button type="submit" name="role" value="customer" class="m-2.5 p-2.5 bg-green-600 text-white border-0 cursor-pointer text-base rounded-md hover:bg-green-800 active:bg-green-950">Customer</button>
+        <button type="submit" name="role" value="manager" class="m-2.5 p-2.5 bg-green-600 text-white border-0 cursor-pointer text-base rounded-md hover:bg-green-800 active:bg-green-950">Manager</button>
     </form>
 </div>

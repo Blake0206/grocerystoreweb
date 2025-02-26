@@ -1,38 +1,38 @@
 <div th:fragment="navbar">
-    <header>
-        <h1 class="logo">Grocery Store</h1>
+    <header class="flex justify-end items-center p-3 bg-blue-300">
+        <h1 class="cursor-pointer mr-auto">Grocery Store</h1>
         <nav>
-            <ul class="nav-links">
+            <ul class="list-none">
                 <!-- Manager-specific links -->
-                <li th:if="${role == 'manager'}">
-                    <a th:href="@{/manager/home}">Home</a>
+                <li th:if="${role == 'manager'}" class="inline-block px-5">
+                    <a th:href="@{/manager/home}" class="transition-all duration-300 ease-in-out hover:text-purple-400">Home</a>
                 </li>
-                <li th:if="${role == 'manager'}">
-                    <a th:href="@{/manager/add-product}">Add Product</a>
+                <li th:if="${role == 'manager'}" class="inline-block px-5">
+                    <a th:href="@{/manager/add-product}" class="transition-all duration-300 ease-in-out hover:text-purple-400">Add Product</a>
                 </li>
-                <li th:if="${role == 'manager'}">
-                    <a th:href="@{/manager/products}">View Products</a>
+                <li th:if="${role == 'manager'}" class="inline-block px-5">
+                    <a th:href="@{/manager/products}" class="transition-all duration-300 ease-in-out hover:text-purple-400">View Products</a>
                 </li>
-                <li th:if="${role == 'manager'}">
-                    <a th:href="@{/manager/inventory-files}">Save/Load Inventory</a>
+                <li th:if="${role == 'manager'}" class="inline-block px-5">
+                    <a th:href="@{/manager/inventory-files}" class="transition-all duration-300 ease-in-out hover:text-purple-400">Save/Load Inventory</a>
                 </li>
 
                 <!-- Customer-specific links -->
-                <li th:if="${role == 'customer'}">
-                    <a th:href="@{/customer/home}">Home</a>
+                <li th:if="${role == 'customer'}" class="inline-block px-5">
+                    <a th:href="@{/customer/home}" class="transition-all duration-300 ease-in-out hover:text-purple-400">Home</a>
                 </li>
-                <li th:if="${role == 'customer'}">
-                    <a th:href="@{/customer/products}">View Products</a>
+                <li th:if="${role == 'customer'}" class="inline-block px-5">
+                    <a th:href="@{/customer/products}" class="transition-all duration-300 ease-in-out hover:text-purple-400">View Products</a>
                 </li>
-                <li th:if="${role == 'customer'}">
-                    <a th:href="@{/customer/cart}">View Cart</a>
+                <li th:if="${role == 'customer'}" class="inline-block px-5">
+                    <a th:href="@{/customer/cart}" class="transition-all duration-300 ease-in-out hover:text-purple-400">View Cart</a>
                 </li>
-                <li th:if="${role == 'customer'}">
-                    <a th:href="@{/customer/checkout}">Checkout</a>
+                <li th:if="${role == 'customer'}" class="inline-block px-5">
+                    <a th:href="@{/customer/checkout}" class="transition-all duration-300 ease-in-out hover:text-purple-400">Checkout</a>
                 </li>
 
                 <!-- Common links -->
-                <li><a th:href="@{/}">Logout</a></li>
+                <li class="inline-block px-5"><a th:href="@{/}" class="transition-all duration-300 ease-in-out hover:text-purple-400">Logout</a></li>
             </ul>
         </nav>
     </header>
